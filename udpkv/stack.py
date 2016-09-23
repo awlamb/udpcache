@@ -7,10 +7,12 @@ class Stack:
     def add(self,key,value):
         if key in self.keystore:
             self.keystore[key].append(value)
+            return True
         else:
             #create a list in the key
             self.keystore[key] = []
             self.keystore[key].append(value)
+            return True
 
     def pop(self,key):
         try:
